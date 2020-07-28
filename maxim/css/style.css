@@ -881,4 +881,54 @@ footer {
 
 .modal-title {
     text-transform: uppercase;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: 0;
+    color: #ffffff;
+    opacity: 1;
 }
+
+.close {
+    font-size: 54px;
+    color: #FFFFFF;
+    opacity: 1;
+    font-weight: 400;
+}
+
+.close:hover {
+    color: #FFFFFF;
+}
+
+.modal-content {
+    height: 100vh;
+    background: transparent linear-gradient(137deg, #42516E 0%, #172135 100%) 0 0 no-repeat padding-box;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+.modal-body {
+    padding-top: 73px;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+.form-group input {
+    background: transparent;
+    border-style: none;
+    border-bottom: 1px solid #FFFFFF;
+    margin-bottom: 70px;
+    text-align: left;
+    font-weight: 400;
+    font-size: 24px;
+    line-height:  44px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+input {outline:none;}
+input::-moz-placeholder { color: #FFFFFF; }
+input::-webkit-input-placeholder { color: #FFFFFF; }
