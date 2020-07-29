@@ -1,1 +1,1 @@
-<?php include_once("intofficemap/index.html"); ?>
+<?php include_once("maxim/index.html"); ?>
