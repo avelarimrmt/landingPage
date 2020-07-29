@@ -13,7 +13,7 @@
 <body>
 
 <header>
-    <nav class="navbar fixed-top navbar-expand-md navbar-light navbar-custom">
+    <nav class="navbar fixed-top navbar-expand-md navbar-light">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <!--<img class="logo" alt="Brand" src="images/logo2.png" style="width: 122px">-->
@@ -35,8 +35,9 @@
                     <li class="nav-item text-center">
                         <a class="nav-link menu-item" href="#placement">Размещение</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <!--<a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button"
+
+                    <li class="nav-item dropdown order-lg-last order-md-last order-sm-first order-first d-flex align-items-center justify-content-end">
+                        <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button"
                            data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false">
                             English
@@ -44,24 +45,27 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="#">English</a>
                             <a class="dropdown-item" href="#">Русский</a>
-                        </div>-->
+                        </div>
+                    </li>
+
+                    <li class="nav-item d-lg-none d-md-none d-sm-block d-block ml-auto mr-auto">
                         <div class="text-center btn-promo">
-                            <button class="btn btn-navbar btn-outline-danger" data-toggle="modal"
-                                    data-target="#myModal">Оставить
-                                заявку
+                            <button class="btn btn-navbar btn-outline-danger m-0" data-toggle="modal"
+                                    data-target="#myModal">
+                                Оставить заявку
                             </button>
                         </div>
-
                     </li>
                 </ul>
             </div>
+
         </div>
     </nav>
 </header>
 
 <section id="promo" class="container-fluid">
     <div class="container">
-        <div class=" offer d-flex flex-column justify-content-between">
+        <div class="offer d-flex flex-column justify-content-between">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <h1>Доставляйте товары через сервис «Максим» без комиссии</h1>
@@ -80,8 +84,7 @@
                     </button>
                 </div>
             </div>
-
-            <div class=" d-flex justify-content-center">
+            <div class="d-flex justify-content-center">
                 <a class="btn scroll-down-btn d-flex align-items-center justify-content-center" href="#benefits">
                     <svg width="2em" height="3em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor"
                          xmlns="http://www.w3.org/2000/svg">
@@ -91,15 +94,16 @@
                 </a>
             </div>
         </div>
+    </div>
 </section>
 
 <section id="benefits">
     <div class="container">
-        <div class="row col-12"></div>
-        <h1 class="title-block title-benefit">Ваши выгоды</h1>
+        <div class="row col-12">
+            <h1 class="title-block title-benefit">Ваши выгоды</h1>
+        </div>
 
         <div class="row col-benefits">
-
             <div class="col-lg-6 col-md-6 col-sm-10">
                 <div class="row benefit d-flex">
                     <img class="benefit_icon p-0 col-lg-2 col-sm-12" src="images/flyers.svg">
@@ -286,17 +290,17 @@
      aria-hidden="true">
     <div class="modal-dialog modal-fullscreen-md-down modal-fullscreen-sm-down modal-lg" role="document">
         <div class="modal-content d-flex m-0 p-0">
-            <div class="modal-header d-flex align-items-center">
-                <h5 class="modal-title w-100 d-flex justify-content-center" id="exampleModalLongTitle">Оставить заявку</h5>
+            <div class="modal-header container d-flex align-items-center">
+                <h5 class="modal-title w-100 d-flex" id="exampleModalLongTitle">Оставить заявку</h5>
                 <button type="button" class="close p-0 m-0" data-dismiss="modal" aria-label="Close">
                     <span class="p-0 m-0" aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <div class="container-fluid">
+                <div class="container-fluid p-0">
                     <form action="" method="post" class="">
                         <div class="form-group w-100">
-                            <input class="w-75" type="text" name="fio" placeholder="Имя">
+                            <input class="w-75" type="text" name="firstName" placeholder="Имя">
                         </div>
                         <div class="form-group w-100">
                             <input class="w-75" name="town" type="text" placeholder="Город">
@@ -308,13 +312,15 @@
                             <input class="w-75" type="email" name="email" placeholder="E-mail">
                         </div>
                         <div class="form-group w-100">
-                            <input class="w-75" name="message"  placeholder="Сообщение">
+                            <input class="w-75" name="message" placeholder="Сообщение">
                         </div>
                     </form>
                 </div>
             </div>
-            <div class="modal-footer d-flex justify-content-center">
+            <div class="modal-footer d-flex justify-content-start">
                 <button class="btn btn-submit btn-danger" type="submit">Отправить</button>
+                <h5 class="w-75">Отправляя свои персональные данные, я даю согласие на их использование и
+                    обработку.</h5>
             </div>
         </div>
     </div>
@@ -328,26 +334,53 @@
         crossorigin="anonymous"></script>
 <script src="js/bootstrap.min.js"></script>
 <script type="text/javascript">
-    $(document).ready(function () {
-        var scroll_start = 0;
-        startchange = $('#promo');
-        var offset = startchange.offset();
-        if (startchange.length) {
-            $(document).scroll(function () {
-                scroll_start = $(this).scrollTop();
-                if (scroll_start > offset.top) {
-                    $(".navbar-custom").css('background-color', '#FFFFFF');
-                    $(".navbar-custom").css('box-shadow', '0 3px 16px #00000029');
-                    $(".nav-item .nav-link").css('color', '#000000');
-                    $(".btn-promo .btn-navbar").css('color', '#000000');
-                } else {
-                    $(".navbar-custom").css('background-color', 'transparent');
-                    $(".navbar-custom").css('box-shadow', 'none');
-                    $(".nav-item .nav-link").css('color', '#ffffff');
-                    $(".btn-promo .btn-navbar").css('color', '#ffffff');
+    document.addEventListener('DOMContentLoaded', function () {
+
+        const navCustom = document.querySelector('.navbar-light');
+        let _change = navCustom.getBoundingClientRect().bottom + window.pageYOffset;
+        const navLinks = document.querySelectorAll('.nav-item .nav-link');
+        const btnCustom = document.querySelector('li.d-lg-none');
+        const dropdown = document.querySelector('.dropdown');
+        const btnRedNavbar = document.querySelector('.btn-navbar');
+
+        window.onscroll = function () {
+            if (window.pageYOffset > _change) {
+                navCustom.classList.add('navbar-custom');
+
+                for (let link of navLinks) {
+                    link.classList.add('link-black');
                 }
-            });
-        }
+
+                dropdown.classList.add('d-none');
+                dropdown.classList.remove('d-flex');
+                dropdown.classList.remove('d-block');
+
+                btnCustom.classList.remove('d-lg-none');
+                btnCustom.classList.add('d-lg-block');
+                btnCustom.classList.remove('d-md-none');
+                btnCustom.classList.add('d-md-block');
+
+                btnRedNavbar.classList.add('link-black');
+
+            } else {
+                navCustom.classList.remove('navbar-custom');
+
+                for (let link of navLinks) {
+                    link.classList.remove('link-black');
+                }
+
+                dropdown.classList.add('d-block');
+                dropdown.classList.add('d-flex');
+                dropdown.classList.remove('d-none');
+
+                btnCustom.classList.remove('d-lg-block');
+                btnCustom.classList.add('d-lg-none');
+                btnCustom.classList.remove('d-md-block');
+                btnCustom.classList.add('d-md-none');
+
+                btnRedNavbar.classList.remove('link-black');
+            }
+        };
     });
 </script>
 
