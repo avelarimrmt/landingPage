@@ -343,6 +343,7 @@
         const btnCustom = document.querySelector('li.d-lg-none');
         const dropdown = document.querySelector('.dropdown');
         const btnRedNavbar = document.querySelector('.btn-navbar');
+        const navIcon = document.getElementById('custom-icon');
 
         window.onscroll = function () {
             if (window.pageYOffset > _change) {
@@ -363,6 +364,8 @@
 
                 btnRedNavbar.classList.add('link-black');
 
+                navIcon.classList.add('icon-black');
+
             } else {
                 navCustom.classList.remove('navbar-custom');
 
@@ -380,6 +383,8 @@
                 btnCustom.classList.add('d-md-none');
 
                 btnRedNavbar.classList.remove('link-black');
+
+                navIcon.classList.remove('icon-black');
             }
         };
     });

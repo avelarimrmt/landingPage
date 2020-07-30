@@ -722,6 +722,12 @@ img {
     opacity: 1;
 }
 
+.navbar-custom {
+    background: #FFFFFF;
+    transition: all .3s;
+    box-shadow: 0px 3px 16px #00000029;
+}
+
 .navbar-back {
     background: linear-gradient(143deg, #42516E 0%, #172135 100%);
 }
@@ -732,12 +738,6 @@ img {
 
 .navbar-light .navbar-nav .nav-link:hover {
     color: #FFFFFF;
-}
-
-.navbar-custom {
-    background: #FFFFFF;
-    transition: all .3s;
-    box-shadow: 0px 3px 16px #00000029;
 }
 
 .navbar-toggler {
@@ -796,6 +796,14 @@ img {
     -moz-transform-origin: left center;
     -o-transform-origin: left center;
     transform-origin: left center;
+}
+
+.icon-black span {
+    background: #000000 !important;
+}
+
+.open span{
+    background: #FFFFFF !important;
 }
 
 #custom-icon.open span:nth-child(1) {
