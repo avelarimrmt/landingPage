@@ -19,9 +19,10 @@
                 <!--<img class="logo" alt="Brand" src="images/logo2.png" style="width: 122px">-->
             </a>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav"
-                    aria-controls="myNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button id="custom-icon" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNav"
+                    aria-controls="myNav" aria-expanded="true" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
             </button>
 
             <div class="collapse navbar-collapse" id="myNav">
@@ -383,6 +384,13 @@
         };
     });
 </script>
-
+<script>
+    $(document).ready(function(){
+        $('#custom-icon').click(function(){
+            $(this).toggleClass('open');
+            $('.navbar-light').toggleClass('navbar-back');
+        });
+    });
+</script>
 </body>
 </html>
