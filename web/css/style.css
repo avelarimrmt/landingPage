@@ -107,8 +107,11 @@
 
     #navbarDropdown {
         font-size: 16px;
-        margin-left: 1.75rem;
         padding: 0 1.75rem;
+    }
+
+    .dropdown-menu {
+        min-width: auto;
     }
 }
 
@@ -212,8 +215,11 @@
 
     #navbarDropdown {
         font-size: 16px;
-        margin-left: 1.75rem;
         padding: 0 1.75rem;
+    }
+
+    .dropdown-menu {
+        min-width: auto;
     }
 }
 
@@ -313,11 +319,29 @@
 
 @media (max-width: 767px) {
     header .nav-item {
-        font-size: 16px;
+        font-size: 20px;
+        line-height: 42px;
+        padding: 2rem 1.5rem;
     }
 
     .btn-navbar {
         padding: 15px 30px;
+    }
+
+    ul li:last-child {
+        padding: 2rem 1.5rem;
+    }
+
+    .navbar-dropdown, .btn-wrapper {
+        width: auto;
+    }
+
+    .navbar-collapse {
+        width: 100%;
+    }
+
+    .navbar-dropdown {
+        margin-right: 15px;
     }
 }
 
@@ -328,6 +352,14 @@
 
     .link-black {
         color: #000000 !important;
+    }
+
+    .navbar-dropdown, .btn-wrapper {
+        width: 140px;
+    }
+
+    .navbar-collapse {
+        width: auto;
     }
 
     h1 {
@@ -363,12 +395,16 @@
     header .nav-item {
         font-size: 12px;
         line-height: 22px;
+        padding: 2rem 0.5rem;
     }
 
     #navbarDropdown {
-        font-size: 10px;
-        margin-left: 1.75rem;
+        font-size: 11px;
         padding: 0 1.55rem;
+    }
+
+    .dropdown-menu a {
+        font-size: 11px;
     }
 
     .title-block {
@@ -447,6 +483,10 @@
 
 @media (min-width: 992px) {
 
+    .navbar-dropdown, .btn-wrapper {
+        width: 220px;
+    }
+
     h1 {
         padding-bottom: 40px;
     }
@@ -462,12 +502,16 @@
 
     header .nav-item {
         font-size: 16px;
+        padding: 2rem 1rem;
     }
 
     #navbarDropdown {
         font-size: 14px;
-        margin-left: 2.7rem;
         padding: 0.4rem 3.5rem;
+    }
+
+    .dropdown-menu a {
+        font-size: 14px;
     }
 
     .scroll-down-btn {
@@ -489,6 +533,10 @@
 
     .link-black {
         color: #000000 !important;
+    }
+
+    .navbar-dropdown, .btn-wrapper {
+        width: 270px;
     }
 
     h1 {
@@ -515,12 +563,16 @@
     header .nav-item {
         font-size: 18px;
         line-height: 42px;
+        padding: 2rem 1.5rem;
     }
 
     #navbarDropdown {
         font-size: 16px;
-        margin-left: 5.3rem;
         padding: 0.4rem 3.5rem;
+    }
+
+    .dropdown-menu a {
+        font-size: 16px;
     }
 
     .title-block {
@@ -613,11 +665,11 @@
     header .nav-item {
         font-size: 18px;
         line-height: 42px;
+        padding: 2rem 1.5rem;
     }
 
     #navbarDropdown {
         font-size: 16px;
-        margin-left: 5.3rem;
         padding: 0.4rem 3.5rem;
     }
 
@@ -725,7 +777,7 @@ img {
 .navbar-custom {
     background: #FFFFFF;
     transition: all .3s;
-    box-shadow: 0px 3px 16px #00000029;
+    box-shadow: 0 3px 16px #00000029;
 }
 
 .navbar-back {
@@ -826,7 +878,6 @@ img {
 
 header .nav-item {
     letter-spacing: 0;
-    padding: 2rem 1.5rem;
     opacity: 1;
 }
 
@@ -837,6 +888,15 @@ header .nav-item {
     display: flex;
     align-items: center;
     color: #FFFFFF;
+}
+
+.dropdown-menu a {
+    width: 100%;
+    text-align: center;
+}
+
+.dropdown-menu a:active, .dropdown-menu a:focus {
+    background: #E31D24;
 }
 
 header .nav-item .menu-item::after {
@@ -1108,3 +1168,5 @@ footer {
 input {outline:none;}
 input::-moz-placeholder { color: #FFFFFF; }
 input::-webkit-input-placeholder { color: #FFFFFF; }
+
+
