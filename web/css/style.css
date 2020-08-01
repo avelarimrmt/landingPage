@@ -1262,15 +1262,43 @@ footer {
     border-top: none;
 }
 
+/*.
+
+
+
+.form-group label {
+    text-align: left;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 44px;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    opacity: 0.7;
+
+}
+
+*/
+
+.form-group {
+    margin-top: 30px;
+    position:relative;
+}
+
+input, label {
+    display: block;
+}
+
 .form-group input {
     background: transparent;
     border-style: none;
+    border-radius: 0;
     border-bottom: 1px solid #FFFFFF;
     margin-bottom: 30px;
     text-align: left;
     font-weight: 400;
     color: #FFFFFF;
     opacity: 1;
+    padding-left: 0;
 }
 
 .form-group input:focus  {
@@ -1282,7 +1310,24 @@ footer {
     color: #FFFFFF;
 }
 
-input::placeholder { color: #FFFFFF !important; }
+label {
+    position:absolute;
+    font-weight: 400;
+    font-size: 24px;
+    color: #FFFFFF;
+    transition:all .2s ease;
+    bottom:.2em;
+    pointer-events:none;
+    white-space:nowrap;/*чтобы был всегда в одну строку*/
+    max-width:100%;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.form-group.active label{
+    bottom: 100%;
+    font-size: 12px;
+    opacity: 0.7;
+}
 
 .agree-policy {
     font-weight: 500;

@@ -301,23 +301,29 @@
                     </svg>
                 </button>
             </div>
+
             <div class="modal-body">
                 <div class="container-fluid p-0">
                     <form action="" method="post" class="">
                         <div class="form-group col-lg-7 col-md-8 col-sm-8 col-12">
-                            <input class="form-control col-12" type="text" name="firstName" placeholder="Имя">
+                            <label class="" for="inputName">Имя</label>
+                            <input id="inputName" class="form-control col-12" type="text" name="firstName">
                         </div>
                         <div class="form-group col-lg-7 col-md-8 col-sm-8 col-12">
-                            <input class="form-control col-12" name="town" type="text" placeholder="Город">
+                            <label for="inputTown">Город</label>
+                            <input id="inputTown" class="form-control col-12" name="town" type="text">
                         </div>
                         <div class="form-group col-lg-7 col-md-8 col-sm-8 col-12">
-                            <input class="form-control col-12" type="text" name="phone" placeholder="Телефон">
+                            <label for="inputPhone">Телефон</label>
+                            <input id="inputPhone" class="form-control col-12" type="text" name="phone">
                         </div>
                         <div class="form-group col-lg-7 col-md-8 col-sm-8 col-12">
-                            <input class="form-control col-12" type="email" name="email" placeholder="E-mail">
+                            <label for="inputMail">E-mail</label>
+                            <input id="inputMail" class="form-control col-12" type="email" name="email">
                         </div>
                         <div class="form-group col-lg-7 col-md-8 col-sm-8 col-12">
-                            <input class="form-control col-12" name="message" placeholder="Сообщение">
+                            <label for="inputMessage">Сообщение</label>
+                            <input id="inputMessage" class="form-control col-12" name="message">
                         </div>
                     </form>
                 </div>
@@ -402,6 +408,18 @@
     });
 
 
+</script>
+
+<script>
+    function toggleInput(){
+        if(this.value){
+            $(this).parent('.form-group').addClass('active');
+        }else{
+            $(this).parent('.form-group').removeClass('active');
+        }
+    }
+    $('.form-group input').each(toggleInput); //на случай предустановленного значения
+    $('.form-group input').on('input',toggleInput); //при изменении
 </script>
 
 </body>
