@@ -61,8 +61,6 @@
                     </li>
                 </ul>
             </div>
-
-
         </div>
     </nav>
 </header>
@@ -290,40 +288,43 @@
 </footer>
 
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+<div class="modal fade p-0 h-100" id="myModal" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle"
      aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen-md-down modal-fullscreen-sm-down modal-lg" role="document">
-        <div class="modal-content d-flex m-0 p-0">
-            <div class="modal-header container d-flex align-items-center">
-                <h5 class="modal-title w-100 d-flex" id="exampleModalLongTitle">Оставить заявку</h5>
-                <button type="button" class="close p-0 m-0" data-dismiss="modal" aria-label="Close">
-                    <span class="p-0 m-0" aria-hidden="true">&times;</span>
+    <div class="modal-dialog modal-fullscreen-md-down modal-fullscreen-sm-down h-100 m-0 float-right" role="document">
+        <div class="modal-content h-100 d-flex">
+            <div class="modal-header d-flex align-items-center">
+                <h5 class="modal-title w-100 d-flex" id="modalLongTitle">Оставить заявку</h5>
+                <button type="button" class="close p-0 m-0 d-flex align-items-center" data-dismiss="modal" aria-label="Close" aria-hidden="true">
+                    <svg viewBox="0 0 16 16" class="bi bi-x" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"/>
+                        <path fill-rule="evenodd" d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/>
+                    </svg>
                 </button>
             </div>
             <div class="modal-body">
                 <div class="container-fluid p-0">
                     <form action="" method="post" class="">
-                        <div class="form-group w-100">
-                            <input class="form-control w-75" type="text" name="firstName" placeholder="Имя">
+                        <div class="form-group col-lg-7 col-md-8 col-sm-8 col-12">
+                            <input class="form-control col-12" type="text" name="firstName" placeholder="Имя">
                         </div>
-                        <div class="form-group w-100">
-                            <input class="form-control w-75" name="town" type="text" placeholder="Город">
+                        <div class="form-group col-lg-7 col-md-8 col-sm-8 col-12">
+                            <input class="form-control col-12" name="town" type="text" placeholder="Город">
                         </div>
-                        <div class="form-group w-100">
-                            <input class="form-control w-75" type="text" name="phone" placeholder="Телефон">
+                        <div class="form-group col-lg-7 col-md-8 col-sm-8 col-12">
+                            <input class="form-control col-12" type="text" name="phone" placeholder="Телефон">
                         </div>
-                        <div class="form-group w-100">
-                            <input class="form-control w-75" type="email" name="email" placeholder="E-mail">
+                        <div class="form-group col-lg-7 col-md-8 col-sm-8 col-12">
+                            <input class="form-control col-12" type="email" name="email" placeholder="E-mail">
                         </div>
-                        <div class="form-group w-100">
-                            <input class="form-control w-75" name="message" placeholder="Сообщение">
+                        <div class="form-group col-lg-7 col-md-8 col-sm-8 col-12">
+                            <input class="form-control col-12" name="message" placeholder="Сообщение">
                         </div>
                     </form>
                 </div>
             </div>
-            <div class="modal-footer d-flex justify-content-start">
-                <button class="btn btn-submit btn-danger" type="submit">Отправить</button>
-                <h5 class="w-75">Отправляя свои персональные данные, я даю согласие на их использование и
+            <div class="modal-footer d-flex justify-content-start flex-wrap col-lg-6 col-md-7 col-sm-7 col-11">
+                <button class="col-12 btn btn-submit btn-danger" type="submit">Отправить</button>
+                <h5 class="agree-policy col-12 text-left">Отправляя свои персональные данные, я даю согласие на их использование и
                     обработку.</h5>
             </div>
         </div>
